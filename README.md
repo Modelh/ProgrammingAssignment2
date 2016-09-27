@@ -106,7 +106,9 @@ This assignment will be graded via peer assessment.
 
 Solution:
 
-1.)
+1.)Note: Function “makeCacheMatrix” creates a 
+special “matrix” object that can cache its inverse.
+
 makeCacheMatrix <- function(x = matrix()) {
       m <- NULL
       set <- function(y) {
@@ -121,7 +123,9 @@ makeCacheMatrix <- function(x = matrix()) {
            getinverse = getinverse)
 }
 
-2.)
+2.)Note: Function “cacheSolve” computes the inverse of the special 
+“matrix” (which is the input of cachemean) returned by makeCacheMatrix above.
+
 cacheSolve <- function(x, ...) {
       m <- x$getinverse()
       if(!is.null(m)) {
